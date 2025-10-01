@@ -1,0 +1,12 @@
+### MAE: 予測値の誤差の大きさを評価 ###
+from sklearn.metrics import mean_absolute_error
+
+# MAEの値を算出
+mean_absolute_error(Y, model.predict(X))
+
+# MAE = 1/ N ∑|yi−yi*|
+# yi : i番目サンプルの実測値
+# yi*: i番目サンプルの予測値
+# N: サンプル数
+# 概要: 0に近いほど良い。予測値と実測値の平均的なズレ（誤差）の大きさ
+# 特徴: 大きく予測を外したケースをあまり重要視していない。MAEを基準として良いモデルを選ぶと最大誤差が大きくなる傾向にある
